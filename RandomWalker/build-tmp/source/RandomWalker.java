@@ -15,13 +15,16 @@ public class RandomWalker extends PApplet {
 
 //Sketch d'apprentissage qui montre comment faire un random walker
 // Un random walker est une particule qui se deplace de facon al\u00e9atoire sur l'ecran 
-Walker walker; 
-ArrayList<Walker> walkers = new ArrayList<Walker>();
+
+//Walker walker; // mon objet walker que je defini \u00e0 partir de la ligne 29
+ArrayList<Walker> walkers = new ArrayList<Walker>(); // tableau qui contiendra de multiples walkers
 
 public void setup(){
 	background(255);
-	size(700,375);
+	size(500,400);
 	smooth();
+
+	// On initialise notre tableau de random walker 
 	for (int i = 0; i<200; i++){
 		walkers.add(new Walker());
 	}
@@ -35,6 +38,7 @@ public void draw(){
   }  
 }
 
+//une fonction qui permet de sauvegarder l'image affich\u00e9e en jpg
 public void mousePressed(){
 	saveFrame("randomwalker.jpg");
 }

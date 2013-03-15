@@ -1,12 +1,14 @@
 //Sketch d'apprentissage qui montre comment faire un random walker
 // Un random walker est une particule qui se deplace de facon aléatoire sur l'ecran 
-Walker walker; 
-ArrayList<Walker> walkers = new ArrayList<Walker>();
+
+ArrayList<Walker> walkers = new ArrayList<Walker>(); // tableau qui contiendra de multiples walkers
 
 void setup(){
 	background(255);
-	size(700,375);
+	size(500,400);
 	smooth();
+
+	// On initialise notre tableau de random walker 
 	for (int i = 0; i<200; i++){
 		walkers.add(new Walker());
 	}
@@ -20,18 +22,18 @@ void draw(){
   }  
 }
 
+//une fonction qui permet de sauvegarder l'image affichée en jpg
 void mousePressed(){
 	saveFrame("randomwalker.jpg");
 }
 
 class Walker {
+	//Variables locales à un object de type Walker
 	int positionx = 0;
 	int positiony = 0;
 	int taille = 0;
-	//--------------------------------------
-	//  CONSTRUCTOR
-	//--------------------------------------
 	
+	//Constructeur (fonction lancée automatiquement à l'initialisation de l'objet)
 	Walker () {
 		positionx = int(random(0, width));
 		positiony = int(random(0, height));
