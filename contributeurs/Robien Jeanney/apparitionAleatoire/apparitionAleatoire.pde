@@ -1,3 +1,6 @@
+//Auteur : Robin Jeanney 
+// Site : http://tutoprocessing.com
+
 int count = 300;
 
 void setup() {
