@@ -16,7 +16,6 @@ public class RandomWalker extends PApplet {
 //Sketch d'apprentissage qui montre comment faire un random walker
 // Un random walker est une particule qui se deplace de facon al\u00e9atoire sur l'ecran 
 
-//Walker walker; // mon objet walker que je defini \u00e0 partir de la ligne 29
 ArrayList<Walker> walkers = new ArrayList<Walker>(); // tableau qui contiendra de multiples walkers
 
 public void setup(){
@@ -40,21 +39,21 @@ public void draw(){
 
 //une fonction qui permet de sauvegarder l'image affich\u00e9e en jpg
 public void mousePressed(){
-	saveFrame("randomwalker.jpg");
+	saveFrame("randomwalker"+random(3000)+".jpg");
 }
 
 class Walker {
+	//Variables locales \u00e0 un object de type Walker
 	int positionx = 0;
 	int positiony = 0;
 	int taille = 0;
-	//--------------------------------------
-	//  CONSTRUCTOR
-	//--------------------------------------
-	
+
+	//Constructeur (fonction lanc\u00e9e automatiquement \u00e0 l'initialisation de l'objet)
 	Walker () {
 		positionx = PApplet.parseInt(random(0, width));
 		positiony = PApplet.parseInt(random(0, height));
 		taille = PApplet.parseInt(random(2, 20));
+			fill(0);
 	}
 
 	public void deplacement(){
@@ -63,6 +62,7 @@ class Walker {
 	}
 
 	public void affichage(){
+		stroke(random(255),random(255),random(255),random(255));
 		ellipse(positionx, positiony, taille, taille);
 	}
 }

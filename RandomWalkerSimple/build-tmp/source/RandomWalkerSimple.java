@@ -13,6 +13,8 @@ import java.io.IOException;
 
 public class RandomWalkerSimple extends PApplet {
 
+// Auteur : Fabien Bonnamy
+// Site web : tutoprocessing.com/random-walker
 //Sketch d'apprentissage qui montre comment faire un random walker
 // Un random walker est une particule qui se deplace de facon al\u00e9atoire sur l'ecran 
 
@@ -30,7 +32,7 @@ public void setup(){
 }
 
 public void draw(){
-	//on choisi au hasard un mouvement pour x et y
+	//on choisi au hasard un mouvement pour x et y compris entre -1 et 1 
 	directionx = PApplet.parseInt(random(-2, 2));
 	directiony = PApplet.parseInt(random(-2, 2));
 
@@ -43,8 +45,6 @@ public void draw(){
 
 	ellipse(positionx, positiony, taille, taille); // enfin on dessinne notre ellispse
 }
-
-
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "RandomWalkerSimple" };
     if (passedArgs != null) {
