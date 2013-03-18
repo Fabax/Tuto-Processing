@@ -124,11 +124,14 @@ if(key == 'c'){
 		couleur = false;
 	}
   }
+  if(key == 'n'){ 
+
+  }
 loop();
 }
 
 public void mousePressed(){
-	loop();
+	saveFrame("squares_tutoprocessing_"+PApplet.parseInt(random(1000))+".jpg");
 }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "squares" };

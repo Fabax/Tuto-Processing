@@ -109,9 +109,12 @@ if(key == 'c'){
 		couleur = false;
 	}
   }
+  if(key == 'n'){ 
+
+  }
 loop();
 }
 
 void mousePressed(){
-	loop();
+	saveFrame("squares_tutoprocessing_"+int(random(1000))+".jpg");
 }
