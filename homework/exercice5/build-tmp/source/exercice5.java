@@ -34,7 +34,7 @@ public void draw() {
 
 			r = map(posX, 0, width, 0, 255);
 			g = map(posY, 0, height, 0, 255);
-			b = 120; 
+			b = map(mouseX, 0, width, 0, 255); 
 
 			fill(r,g,b);
 
