@@ -5,6 +5,7 @@ import processing.opengl.*;
 
 import java.util.HashMap; 
 import java.util.ArrayList; 
+import java.io.File; 
 import java.io.BufferedReader; 
 import java.io.PrintWriter; 
 import java.io.InputStream; 
@@ -23,7 +24,7 @@ int nbParticules;
 
 public void setup()
 {
-  size(700, 500, JAVA2D);
+  size(772, 250, JAVA2D);
   nbParticules = 50;
   x = new float[nbParticules];
   y = new float[nbParticules];
@@ -64,12 +65,11 @@ public void draw()
     fill(255);
 
     ellipse(x[i], y[i], taille, taille);
-    ellipse(x[i], taille, y[i], y[i]);
   }
 }
 
 public void mousePressed(){
-  saveFrame("tableaux"+PApplet.parseInt(random(1000))+".jpg");
+  saveFrame("banner-772x250.png");
 }
   static public void main(String[] passedArgs) {
     String[] appletArgs = new String[] { "tableaux" };

@@ -8,7 +8,7 @@ int nbParticules;
 
 void setup()
 {
-  size(700, 500, JAVA2D);
+  size(772, 250, JAVA2D);
   nbParticules = 50;
   x = new float[nbParticules];
   y = new float[nbParticules];
@@ -53,5 +53,5 @@ void draw()
 }
 
 void mousePressed(){
-  saveFrame("tableaux"+int(random(1000))+".jpg");
+  saveFrame("banner-772x250.png");
 }
